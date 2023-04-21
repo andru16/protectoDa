@@ -318,6 +318,13 @@ return [
             'label'       => 4,
             'label_color' => 'success',
         ],
+        [
+            'text'        => 'pages2',
+            'url'         => 'admin/pages',
+            'icon'        => 'far fa-fw fa-file',
+            'label'       => 4,
+            'label_color' => 'success',
+        ],
         ['header' => 'account_settings'],
         [
             'text' => 'profile',
