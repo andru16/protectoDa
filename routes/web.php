@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ControlUsuarios\ControlUsuarioController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +21,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::middleware('auth')->group(function(){
+    Route::get('/usuarios/control-usuarios', [ControlUsuarioController::class, 'vistaUsuarios'])->name('control-usuarios-vista');
+    Route::get('/usuarios/listar-usuarios', [ControlUsuarioController::class, 'listarUsuarios']);
+});
