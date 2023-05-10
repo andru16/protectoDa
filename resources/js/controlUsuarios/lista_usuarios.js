@@ -9,6 +9,10 @@ const app = createApp({
             tablaLista: {
                 draw: () => {}
             },
+            formulario:{
+                nombre : '',
+
+            }
         }
     },
     computed: {
@@ -44,7 +48,15 @@ const app = createApp({
     },
 
     methods: {
-
+        crearUsuarios(){
+        axios.post(url, nombre, config)
+        .then(response => {
+            // código a ejecutar si la solicitud fue exitosa
+        })
+        .catch(error => {
+            // código a ejecutar si la solicitud falló
+        });
+        }
 
     }
 })
